@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPT + DartPad</title>
+  </head>
+  <body>
+    <div id="app-container">
+      <form id="submit-form">
+        <input type="text" name="apiKey" placeholder="API KEY" />
+        <textarea
+          id="requirements"
+          name="prompt"
+          placeholder="要件"
+          autocomplete="off"
+        ></textarea>
+        <button type="submit">送信</button>
+        <div id="loading">
+          <span>Thinking......</span>
+        </div>
+      </form>
+      <pre>
+        <code id="code-block" class="language-run-dartpad:theme-dark:mode-inline:split-true">
+        </code>
+      </pre>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+    <script
+      id="dart-pad"
+      type="text/javascript"
+      src="https://dartpad.dev/inject_embed.dart.js"
+      defer
+    ></script>
+  </body>
+</html>

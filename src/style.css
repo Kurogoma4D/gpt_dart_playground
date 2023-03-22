@@ -1,0 +1,101 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#app-container {
+  width: 100%;
+  display: flex;
+}
+
+#submit-form {
+  padding: 32px;
+  flex: 1;
+}
+
+#submit-form * {
+  display: block;
+}
+
+#submit-form textarea {
+  margin: 4rem 0;
+  width: 100%;
+  height: 12rem;
+}
+
+div:has(iframe[src^="https://dartpad"])
+{
+  flex: 1;
+}
+
+iframe[src^="https://dartpad"]
+{
+  border: none;
+  height: 100vh;
+  resize: vertical;
+  width: 100%;
+}
+
+#loading {
+  display: none;
+}
+
+#loading span {
+  height: 4rem;
+  margin-top: 32px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: large;
+  animation: addDot 2s steps(3, end) infinite;
+}
+
+@keyframes addDot {
+  0% {
+    width: 4em;
+  }
+  100% {
+    width: 7em;
+  }
+}
